@@ -79,6 +79,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
         "consumptionMethod",
       ) as ConsumptionMethod;
 
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const order = await createOrder({
         consumptionMethod,
         customerCpf: data.cpf,
