@@ -63,6 +63,8 @@ model Order {
   restaurantId      String
   createdAt         DateTime          @default(now())
   updatedAt         DateTime          @updatedAt
+  customerName      String
+  customerCpf       String
 }
 
 model OrderProduct {
