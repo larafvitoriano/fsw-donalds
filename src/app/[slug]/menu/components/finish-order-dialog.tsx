@@ -80,15 +80,15 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
       ) as ConsumptionMethod;
 
       const order = await createOrder({
-          consumptionMethod,
-          customerCpf: data.cpf,
-          customerName: data.name,
-          products,
-          slug,
-        });
+        consumptionMethod,
+        customerCpf: data.cpf,
+        customerName: data.name,
+        products,
+        slug,
+      });
 
-        onOpenChange(false);
-        toast.success("Pedido finalizado com sucesso!");
+      onOpenChange(false);
+      toast.success("Pedido finalizado com sucesso!");
 
     } catch (error) {
       console.error(error);
@@ -150,7 +150,7 @@ const FinishOrderDialog = ({ open, onOpenChange }: FinishOrderDialogProps) => {
                   className="rounded-full"
                   disabled={isLoading}
                 >
-                  {isLoading && <Loader2Icon className="animate-spin"/>}
+                  {isLoading && <Loader2Icon className="animate-spin" />}
                   Finalizar
                 </Button>
                 <DrawerClose asChild>
